@@ -1,4 +1,4 @@
-//! DeckCraft fonts: the font database (craft-fonts families, user and system fonts, and open
+//! DeckKoja fonts: the font database (craft-fonts families, user and system fonts, and open
 //! substitutes for the Office fonts presentations ask for), vertical metrics, glyph outlines and
 //! OpenType shaping, script/slot classification and per-cluster fallback.
 //!
@@ -23,7 +23,7 @@ pub use kurbo::BezPath;
 pub use script::{FontSlot, ScriptTag};
 pub use shape::{ShapeParams, ShapedGlyph, shape_range};
 
-/// A font from the optional craft-fonts build input (https://github.com/storytold/craft-fonts;
+/// A font from the optional craft-fonts build input (https://github.com/Kojalytics/craft-fonts;
 /// empty unless built with `CRAFT_FONTS_DIR`, see `build.rs`).
 pub struct CraftFont {
     pub family: &'static str,
@@ -365,7 +365,7 @@ mod tests {
                 assert_eq!(db.document_face(missing, "Regular").family, db.face(twin, "Regular").family, "{missing}");
             }
         }
-        // Metric-compatible stand-ins and DeckCraft's default keep their own fallbacks.
+        // Metric-compatible stand-ins and DeckKoja's default keep their own fallbacks.
         // So do Office's cloud fonts, which PowerPoint downloads and draws as themselves.
         for kept in ["Arial", "Times New Roman", "Cambria", "Courier New", FALLBACK_FAMILY, "Aptos", "Aptos Display", "Grandview"] {
             assert_eq!(db.document_face(kept, "Regular").family, db.face(kept, "Regular").family, "{kept}");
