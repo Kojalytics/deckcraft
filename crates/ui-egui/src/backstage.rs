@@ -1369,7 +1369,6 @@ fn account(app: &mut SlideApp, ui: &mut Ui) {
             ) {
                 let _ = app.run("app.about", json!({}));
             }
-            ui.hyperlink_to("Source on GitHub", deckcraft_engine::links::GITHUB);
         });
     });
 }

@@ -2614,8 +2614,7 @@ pub fn about(_app: &mut SlideApp, ui: &mut Ui) {
         ui.label("An open-source, clean-room project. Not affiliated with Microsoft.");
         ui.label("Published by Kojalytics. Based on DeckCraft by the ArtCraft team.");
         ui.add_space(6.0);
-        ui.hyperlink_to("kojalytics.com/apps/deckcraft", deckcraft_engine::links::APP_PAGE);
-        ui.hyperlink_to("Source on GitHub", deckcraft_engine::links::GITHUB);
+        ui.hyperlink_to("kojalytics.com/koja-apps", deckcraft_engine::links::APP_PAGE);
         ui.add_space(6.0);
         ui.label(egui::RichText::new("MIT OR Apache-2.0 · © 2026 ArtCraft Team and the DeckCraft contributors · Modifications © 2026 Kojalytics").size(11.0).color(t.text_faint));
     });
